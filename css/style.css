@@ -10,11 +10,23 @@
     font-family: 'Poppins' !important;
 }
 
-/* Header */
+.fonte-grande {
+    font-size: 40pt;
+}
+
+.cor-cinza {
+    color: #394E61;
+}
+
+.fonte-azul{
+    color: #1B3057;
+}
 
 .gradient-bg {
     background-image: linear-gradient(to right, #1E315B, #496DBF);
 }
+
+/* Header */
 
 .vertical-line {
     border-left: 2px solid #496DBF;
@@ -94,14 +106,6 @@
 
 /* Main index */
 
-.fonte-grande {
-    font-size: 40pt;
-}
-
-.fonte-azul{
-    color: #1B3057;
-}
-
 .breadcrumbs {
     margin-top: 120px;
 }
@@ -145,12 +149,15 @@
     height: 22px;
 }
 
-.cor-cinza {
-    color: #394E61;
-}
-
 .btn-group {
     height: 70px;
+}
+
+.margin-grande-top{
+    margin-top: 90px;
+}
+.margin-grande-bottom{
+    margin-bottom: 90px;
 }
 
 /* Main faq */
