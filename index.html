@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hospital - Agendar consulta</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/btn.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top gradient-bg bg-body-tertiary d-flex">
+            <div class="container py-2">
+                <div class="d-flex gap-2 align-items-center">
+                    <a class="navbar-brand m-0 d-flex" href="#">
+                        <img src="imgs/HOSPITAL.svg" alt="logo">
+                    </a>
+                    <div class="vertical-line"></div>
+                    <p class="text-top m-0 fonte-titulo">Agendamento de consultas</p>
+                </div>
+                <div class="off-screen-menu">
+                    <ul class="ul-menu fonte-titulo">
+                        <li><a href="index.html" class="text-white link-underline link-underline-opacity-0">Home</a>
+                        </li>
+                        <li><a href="#" class="text-white link-underline link-underline-opacity-0">Rede credenciada</a>
+                        </li>
+                        <li><a href="#" class="text-white link-underline link-underline-opacity-0">Agendamentos</a></li>
+                        <li><a href="#" class="text-white link-underline link-underline-opacity-0">2º Via de Boleto</a>
+                        </li>
+                        <li><a href="#" class="text-white link-underline link-underline-opacity-0">Área do
+                                Beneficiário</a></li>
+                        <li><a href="faq.html" class="text-white link-underline link-underline-opacity-0">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-xl">
+            <div class="col breadcrumbs">
+                <div class="d-flex justify-content-end gap-3">
+                    <a href="#" class="links-pags">HOME</a>
+                    <span class="links-pags"> | </span>
+                    <a href="#" class="links-pags">FACILIDADES</a>
+                    <span class="links-pags"> | </span>
+                    <a href="#" class="links-pags">AGENDAMENTOS</a>
+                </div>
+            </div>
+            <section id="comeco" class="d-none">
+                <div class="row d-flex justify-content-center mt-5">
+                    <div class="col-12 col-md-6">
+                        <div class="d-grid gap-4">
+                            <h1 class="fonte-azul fonte-grande fonte-titulo fonte-titulo">Agende consultas com
+                                praticidade</h1>
+                            <p class="cor-cinza fonte-titulo">Busque e agende a sua consulta com médicos, psicólogos,
+                                nutricionistas
+                                e outras especialidades que
+                                atendem no Hospital Oxigenweb em Presidente Prudente - SP</p>
+                            <button class="btn btn-primary btn-start-appointment">Agende Aqui</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="imgs/img-tratamento.png" alt="imagem-atendimento" class="img-fluid">
+                    </div>
+                </div>
+            </section>
+
+            <section id="form" class="">
+                <div class="row d-flex justify-content-center mt-5">
+                    <div class="col-12 col-md-3">
+                        <ul class="progress-list">
+                            <li class="one active">
+                                <div class="d-flex align-items-center">
+                                    <svg width="31" height="35" viewBox="0 0 31 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="15.5" cy="17.5" r="15.5" />
+                                        <path
+                                            d="M14.064 22V15.502H12.516V14.512C13.012 14.512 13.412 14.466 13.716 14.374C14.024 14.278 14.254 14.142 14.406 13.966C14.558 13.786 14.648 13.572 14.676 13.324H15.84V22H14.064Z"
+                                            fill="white" />
+                                    </svg>
+                                    <div class="ms-2 d-flex flex-column">
+                                        <span>Especialidade</span>
+                                        <span id="especialidade-txt"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="two">
+                                <div class="d-flex align-items-center">
+                                    <svg width="31" height="35" viewBox="0 0 31 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="15.5" cy="17.5" r="15.5" />
+                                        <path
+                                            d="M12.678 22V21.136V20.692C12.678 20.252 12.76 19.872 12.924 19.552C13.088 19.228 13.304 18.948 13.572 18.712C13.844 18.472 14.14 18.262 14.46 18.082C14.784 17.902 15.108 17.732 15.432 17.572C15.756 17.412 16.052 17.252 16.32 17.092C16.592 16.928 16.81 16.746 16.974 16.546C17.138 16.346 17.22 16.11 17.22 15.838C17.22 15.49 17.098 15.206 16.854 14.986C16.614 14.766 16.284 14.656 15.864 14.656C15.428 14.656 15.058 14.782 14.754 15.034C14.45 15.286 14.262 15.666 14.19 16.174H12.516C12.524 15.622 12.652 15.122 12.9 14.674C13.152 14.222 13.528 13.864 14.028 13.6C14.528 13.336 15.156 13.204 15.912 13.204C16.56 13.204 17.118 13.314 17.586 13.534C18.058 13.754 18.422 14.06 18.678 14.452C18.934 14.844 19.062 15.302 19.062 15.826C19.062 16.262 18.982 16.638 18.822 16.954C18.662 17.27 18.45 17.54 18.186 17.764C17.922 17.988 17.632 18.184 17.316 18.352C17 18.52 16.684 18.676 16.368 18.82C16.056 18.964 15.768 19.112 15.504 19.264C15.24 19.412 15.028 19.58 14.868 19.768C14.708 19.956 14.628 20.182 14.628 20.446V20.524H19.05V22H12.678Z"
+                                            fill="white" />
+                                    </svg>
+                                    <div class="ms-2 d-flex flex-column">
+                                        <span>Selecione o profissional</span>
+                                        <span id="profissional-txt"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="three">
+                                <div class="d-flex align-items-center">
+                                    <svg width="31" height="35" viewBox="0 0 31 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="15.5" cy="17.5" r="15.5" />
+                                        <path
+                                            d="M12.582 15.994C12.582 15.37 12.728 14.852 13.02 14.44C13.316 14.028 13.714 13.72 14.214 13.516C14.714 13.308 15.27 13.204 15.882 13.204C16.53 13.204 17.106 13.288 17.61 13.456C18.118 13.624 18.518 13.88 18.81 14.224C19.102 14.568 19.248 15.004 19.248 15.532C19.248 15.96 19.124 16.338 18.876 16.666C18.628 16.99 18.224 17.248 17.664 17.44C17.984 17.528 18.28 17.662 18.552 17.842C18.824 18.022 19.042 18.252 19.206 18.532C19.37 18.812 19.452 19.148 19.452 19.54C19.452 19.964 19.358 20.338 19.17 20.662C18.982 20.986 18.722 21.258 18.39 21.478C18.058 21.698 17.674 21.862 17.238 21.97C16.802 22.078 16.336 22.132 15.84 22.132C15.144 22.128 14.55 22.014 14.058 21.79C13.57 21.562 13.194 21.238 12.93 20.818C12.67 20.398 12.536 19.898 12.528 19.318H14.214C14.298 19.81 14.49 20.166 14.79 20.386C15.09 20.606 15.446 20.716 15.858 20.716C16.218 20.716 16.526 20.664 16.782 20.56C17.042 20.456 17.24 20.312 17.376 20.128C17.516 19.94 17.586 19.726 17.586 19.486C17.586 19.238 17.514 19.024 17.37 18.844C17.23 18.664 17.034 18.524 16.782 18.424C16.53 18.32 16.242 18.264 15.918 18.256L15.09 18.226V16.834L15.834 16.792C16.146 16.78 16.418 16.722 16.65 16.618C16.882 16.514 17.062 16.376 17.19 16.204C17.322 16.028 17.388 15.83 17.388 15.61C17.388 15.398 17.322 15.214 17.19 15.058C17.058 14.902 16.876 14.78 16.644 14.692C16.412 14.604 16.146 14.56 15.846 14.56C15.57 14.56 15.316 14.606 15.084 14.698C14.852 14.79 14.662 14.942 14.514 15.154C14.366 15.362 14.28 15.642 14.256 15.994H12.582Z"
+                                            fill="white" />
+                                    </svg>
+                                    <div class="ms-2 d-flex flex-column">
+                                        <span>Data e Hora</span>
+                                        <span id="data-e-hora-txt"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="four">
+                                <div class="d-flex align-items-center">
+                                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="15.5" cy="15.5" r="15.5" />
+                                        <path
+                                            d="M16.47 11.324H18.192V16.61H19.53V18.08H18.192V20H16.506L16.512 18.08H12.516V16.64L16.47 11.324ZM14.136 16.61H16.512V13.43L14.136 16.61Z"
+                                            fill="white" />
+                                    </svg>
+                                    <div class="ms-2 d-flex flex-column">
+                                        <span>Dados do paciente</span>
+                                        <span id="paciente"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="five">
+                                <svg width="31" height="35" viewBox="0 0 31 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="15.5" cy="17.5" r="15.5" />
+                                    <path
+                                        d="M13.434 13.324H19.008L18.942 14.758H14.82L14.652 16.852C14.972 16.672 15.276 16.542 15.564 16.462C15.856 16.382 16.176 16.342 16.524 16.342C17.104 16.342 17.622 16.452 18.078 16.672C18.538 16.888 18.902 17.206 19.17 17.626C19.438 18.046 19.572 18.558 19.572 19.162C19.572 19.774 19.434 20.302 19.158 20.746C18.882 21.19 18.49 21.532 17.982 21.772C17.478 22.012 16.88 22.132 16.188 22.132C15.62 22.132 15.092 22.044 14.604 21.868C14.116 21.692 13.694 21.452 13.338 21.148C12.982 20.84 12.712 20.488 12.528 20.092L13.896 19.282C14.052 19.554 14.228 19.8 14.424 20.02C14.62 20.236 14.846 20.408 15.102 20.536C15.362 20.66 15.664 20.722 16.008 20.722C16.528 20.722 16.946 20.584 17.262 20.308C17.578 20.032 17.736 19.672 17.736 19.228C17.736 18.948 17.664 18.698 17.52 18.478C17.38 18.254 17.186 18.078 16.938 17.95C16.69 17.822 16.4 17.758 16.068 17.758C15.892 17.758 15.724 17.774 15.564 17.806C15.408 17.834 15.248 17.89 15.084 17.974C14.924 18.054 14.746 18.17 14.55 18.322C14.494 18.346 14.454 18.358 14.43 18.358C14.41 18.358 14.37 18.344 14.31 18.316L13.038 17.728L13.434 13.324Z"
+                                        fill="white" />
+                                </svg>
+                                <span>Confirmação</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 d-flex align-items-center">
+                        <h2><b id="etapa" class="fonte-azul text-center fonte-titulo">Selecione a especialidade</b></h2>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <section id="form-doctor" class="d-none">
+                            <span>Profissionais de Gastroenterologia</span>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card">
+                                        <div
+                                            class="card-image rounded-top d-flex justify-content-center align-items-center">
+                                            <img src="imgs/ico-doctor-placeholder.png" height="50px" width="58px"
+                                                alt="">
+                                        </div>
+                                        <div class="card-body d-grid">
+                                            <p class="card-title text-center m-0">Dra. Jéssica Oxigenweb</p>
+                                            <input type="radio" class="doctor-radio" name="doutor" value="Jéssica"
+                                                id="doutor1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div
+                                            class="card-image rounded-top d-flex justify-content-center align-items-center">
+                                            <img src="imgs/ico-doctor-placeholder.png" height="50px" width="58px"
+                                                alt="">
+                                        </div>
+                                        <div class="card-body d-grid">
+                                            <p class="card-title text-center m-0">Dr. Nathan Oxigenweb</p>
+                                            <input type="radio" class="doctor-radio" name="doutor" value="Nathan"
+                                                id="doutor2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div
+                                            class="card-image rounded-top d-flex justify-content-center align-items-center">
+                                            <img src="imgs/ico-doctor-placeholder.png" height="50px" width="58px"
+                                                alt="">
+                                        </div>
+                                        <div class="card-body d-grid">
+                                            <p class="card-title text-center m-0">Dr. Ricardo Nakamura Oxigenweb</p>
+                                            <input type="radio" class="doctor-radio" name="doutor"
+                                                value="Ricardo Nakamura" id="doutor3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mt-4 justify-content-between">
+                                    <button class="btn btn-ghost-primary btn-next"><i
+                                            class="bi bi-chevron-left"></i>Voltar</button>
+                                    <button class="btn btn-primary btn-next">Avançar <i
+                                            class="bi bi-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="form-time" class="">
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-control" type="date" aria-label="date input">
+                                </div>
+                                <div class="d-flex mt-4 justify-content-between">
+                                    <button class="btn btn-ghost-primary btn-next"><i
+                                            class="bi bi-chevron-left"></i>Voltar</button>
+                                    <button class="btn btn-primary btn-next">Avançar <i
+                                            class="bi bi-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="gradient-bg pt-5 pb-4">
+            <div class="container-xl">
+                <div class="d-flex gap-5">
+                    <img src="imgs/HOSPITAL.svg" alt="logo">
+                    <div class="d-flex align-items-center">
+                        <img src="imgs/ico-telefone.svg" alt="ico-telefone">
+                        <span class="text-white">33 3333 3333</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="imgs/ico-location.svg" alt="ico-location">
+                        <span class="text-white">Avenida Oxigenweb, 2009 - Vila Oxigenweb | Presidente Oxigenweb - SP
+                            <br>CNPJ 00.000.000/0001-00</span>
+                    </div>
+                </div>
+                <div class="linha-footer"></div>
+                <div class="d-flex gap-5 justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <span class="text-white">© 2024 Oxigenweb Hospital. Criação:&nbsp;</span>
+                        <img src="imgs/ico-oxigen.svg" alt="ico-oxigen">
+                    </div>
+                    <div class="d-flex align-items-center gap-5">
+                        <span class="text-white">Responsável técnico Plano de Saúde:<br>Dra. Jéssica Oxigenweb</span>
+                        <span class="text-white">Responsável Hospital:<br>Dr. Nathan Oxigenweb</span>
+                    </div>
+                    <button class="btn btn-chat circulo-lupa rounded-circle" type="submit"><i
+                            class="bi bi-chat-left-dots-fill text-white"></i></button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="js/form.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
