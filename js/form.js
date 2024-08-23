@@ -30,10 +30,11 @@ const fourthButtonNext = document.getElementById('fourthButtonNext');
 const buttonConfirm = document.getElementById('buttonConfirm');
 const homeButton = document.getElementById('homeButton');
 
-// Especialidades
+// Infos
 const especialidade1 = document.getElementById('especialidade1');
+const doctorRadio = document.querySelector('input[name="doutor"]:checked')
 
-// Auxiliares
+// Variaveis
 let i = 0;
 
 // Funções
@@ -96,6 +97,11 @@ function nextForm() {
         form_array[i + 1].classList.remove('d-none');
         i++;
     }
+    saveInfos();
+}
+function saveInfos() {
+    especialidade_txt.innerHTML = especialidade1.value;
+    profissional_txt.innerHTML = doctorRadio.value;
 }
 
 function backToHome(){
