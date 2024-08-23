@@ -134,16 +134,63 @@
     text-decoration: none;
 }
 
-.search-bar {
-    margin-bottom: 20px;
-}
-
 .search-bar input {
     width: 60%;
     padding: 10px;
     border-radius: 20px;
     border: 2px solid #77C2D7;
     font-size: 14px;
+}
+
+.specialty {
+    height: 350px;
+    overflow: scroll;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.specialty-item {
+    width: 453px;
+    padding: 20px 0px 20px 30px;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.5s ease-in-out, background-color 0.3s ease-in;
+    overflow: hidden;
+    /* Impede que o conteúdo extrapole durante a animação */
+}
+
+.specialty-item h2 {
+    color: #C05A94;
+    margin: 0;
+}
+
+.specialty-item.active {
+    border-color: #C05A94;
+    background-color: #F6EEDE;
+}
+
+.specialty-item.active p {
+    display: block;
+}
+
+.specialty-item p {
+    display: none;
+    margin-top: 10px;
+    color: #394E61;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 2s ease-in;
+    /* Animação da altura e opacidade */
+}
+
+/* Quando ativo, anima a abertura do conteúdo */
+.specialty-item.active p {
+    display: block;
+    opacity: 1;
+    max-height: 200px;
+    transition: opacity 0.3s ease-in-out, max-height 2s ease-in;
+    /* Altura máxima do conteúdo exibido */
 }
 
 .card{

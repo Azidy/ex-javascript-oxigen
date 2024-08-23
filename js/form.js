@@ -45,10 +45,6 @@ const fourthButtonPrevious = document.getElementById('fourthButtonPrevious');
 const buttonConfirm = document.getElementById('buttonConfirm');
 const homeButton = document.getElementById('homeButton');
 
-
-
-
-
 // Variaveis
 let i = 0;
 
@@ -122,7 +118,7 @@ function prviousForm() {
 
 function saveEspecialidade() {
     const especialidade1 = document.getElementById('especialidade1');
-    especialidade_txt.innerHTML = especialidade1.value;
+    especialidade_txt.innerHTML = especialidade1.dataset.value;
     step.innerHTML = 'Selecione o profissional';
     especialidadeTxtFinal.innerHTML = `${especialidade1.value}`;
 }
@@ -181,7 +177,7 @@ function removeDate() {
     step.innerHTML = 'Selecione a data e o horário da consulta';
 }
 
-function removePacient(){
+function removePacient() {
     paciente_txt.innerHTML = ``;
     step.innerHTML = 'Informe os dados do paciente';
 }
@@ -223,3 +219,12 @@ fourthButtonPrevious.addEventListener('click', removePacient);
 buttonConfirm.addEventListener('click', nextForm);
 
 homeButton.addEventListener('click', backToHome)
+
+const specialties = document.querySelectorAll('.specialty-item');
+
+specialties.forEach(specialty => {
+    specialty.addEventListener('click', () => {
+        specialties.forEach(item => item.classList.remove('active'));
+        specialty.classList.add('active');
+    });
+});
