@@ -59,7 +59,8 @@
                     <a href="#" class="links-pags">AGENDAMENTOS</a>
                 </div>
             </div>
-            <section id="comeco" class="d-none">
+
+            <section id="home" class="">
                 <div class="row d-flex justify-content-center mt-5">
                     <div class="col-12 col-md-6">
                         <div class="d-grid gap-4">
@@ -69,7 +70,7 @@
                                 nutricionistas
                                 e outras especialidades que
                                 atendem no Hospital Oxigenweb em Presidente Prudente - SP</p>
-                            <button class="btn btn-primary btn-start-appointment">Agende Aqui</button>
+                            <button id="startBookingAppointment" class="btn btn-primary btn-start-appointment">Agende Aqui</button>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
@@ -78,13 +79,13 @@
                 </div>
             </section>
 
-            <section id="form" class="">
-                <div class="row d-flex justify-content-center mt-5">
-                    <div class="col-12 col-md-3">
-                        <ul class="progress-list">
+            <section id="form" class="d-none">
+                <div class="row d-flex justify-content-center mt-3">
+                    <div class="col-12 col-md-3 d-flex justify-content-center">
+                        <ul class="progress-list p-0 d-flex flex-row flex-md-column">
                             <li class="one active">
                                 <div class="d-flex align-items-center">
-                                    <svg width="31" height="35" viewBox="0 0 31 35" fill="none"
+                                    <svg width="32" height="35" viewBox="0 0 31 35" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="15.5" cy="17.5" r="15.5" />
                                         <path
@@ -99,7 +100,7 @@
                             </li>
                             <li class="two">
                                 <div class="d-flex align-items-center">
-                                    <svg width="31" height="35" viewBox="0 0 31 35" fill="none"
+                                    <svg width="32" height="35" viewBox="0 0 31 35" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="15.5" cy="17.5" r="15.5" />
                                         <path
@@ -114,7 +115,7 @@
                             </li>
                             <li class="three">
                                 <div class="d-flex align-items-center">
-                                    <svg width="31" height="35" viewBox="0 0 31 35" fill="none"
+                                    <svg width="32" height="35" viewBox="0 0 31 35" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="15.5" cy="17.5" r="15.5" />
                                         <path
@@ -123,13 +124,13 @@
                                     </svg>
                                     <div class="ms-2 d-flex flex-column">
                                         <span>Data e Hora</span>
-                                        <span id="data-e-hora-txt"></span>
+                                        <span id="date-txt"></span>
                                     </div>
                                 </div>
                             </li>
                             <li class="four">
                                 <div class="d-flex align-items-center">
-                                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                    <svg width="32" height="35" viewBox="0 0 31 31" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="15.5" cy="15.5" r="15.5" />
                                         <path
@@ -143,7 +144,7 @@
                                 </div>
                             </li>
                             <li class="five">
-                                <svg width="31" height="35" viewBox="0 0 31 35" fill="none"
+                                <svg width="32" height="35" viewBox="0 0 31 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="15.5" cy="17.5" r="15.5" />
                                     <path
@@ -155,12 +156,69 @@
                         </ul>
                     </div>
                     <div class="col-12 col-md-3 d-flex align-items-center">
-                        <h2><b id="etapa" class="fonte-azul text-center fonte-titulo">Selecione a especialidade</b></h2>
+                        <h2><b id="etapa" class="fonte-azul fonte-titulo">Selecione a especialidade</b></h2>
                     </div>
                     <div class="col-12 col-md-6">
+
+                        <section id="form-especialidade" class="">
+                            <div class="row">
+                                <div class="col d-grid gap-3">
+                                    <div class="search-bar">
+                                        <input type="text" id="search" placeholder="Buscar especialidade na lista">
+                                    </div>
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                    aria-expanded="false" id="especialidade1" value="Especialidade 1" aria-controls="flush-collapseOne">
+                                                    Especialidade 1
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Descrição da especialidade selecionada lorem ipsum ansiedade é natural e, para além disso, é uma emoção fundamental.</div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                    aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                    Especialidade 2
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Descrição da especialidade selecionada lorem ipsum ansiedade é natural e, para além disso, é uma emoção fundamental./div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                                    Especialidade 3
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Descrição da especialidade selecionada lorem ipsum ansiedade é natural e, para além disso, é uma emoção fundamental.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-4 justify-content-between margin-grande-bottom">
+                                <button id="firstButtonNext" class="btn btn-primary btn-next ms-auto disabled">Avançar <i
+                                        class="bi bi-chevron-right"></i></button>
+                            </div>
+                        </section>
+
                         <section id="form-doctor" class="d-none">
                             <span>Profissionais de Gastroenterologia</span>
-                            <div class="row">
+                            <div class="row pb-5">
                                 <div class="col">
                                     <div class="card">
                                         <div
@@ -206,7 +264,7 @@
                                 <div class="d-flex mt-4 justify-content-between">
                                     <button class="btn btn-ghost-primary btn-next"><i
                                             class="bi bi-chevron-left"></i>Voltar</button>
-                                    <button class="btn btn-primary btn-next">Avançar <i
+                                    <button id="secondButtonNext" class="btn btn-primary btn-next">Avançar <i
                                             class="bi bi-chevron-right"></i></button>
                                 </div>
                             </div>
@@ -234,40 +292,103 @@
                                 <div class="d-flex mt-4 justify-content-between margin-grande-bottom">
                                     <button class="btn btn-ghost-primary btn-next"><i
                                             class="bi bi-chevron-left"></i>Voltar</button>
-                                    <button class="btn btn-primary btn-next">Avançar <i
+                                    <button id="thirdButtonNext" class="btn btn-primary btn-next">Avançar <i
                                             class="bi bi-chevron-right"></i></button>
                                 </div>
                             </div>
                         </section>
 
-                        <section id="form-info" class="">
+                        <section id="form-info" class="d-none">
                             <div class="row">
                                 <div class="col d-grid gap-3">
                                     <select class="form-select form-select-lg" aria-label="select time">
-                                        <option selected value="Consulta para si mesmo">Sim, a consulta é para mim</option>
-                                        <option value="Consulta para outra pessoas">Não, a consulta é para outra pessoa</option>
+                                        <option selected value="Consulta para si mesmo">Sim, a consulta é para mim
+                                        </option>
+                                        <option value="Consulta para outra pessoas">Não, a consulta é para outra pessoa
+                                        </option>
                                     </select>
-                                    <input class="form-control form-control-lg" type="text" placeholder="Nome completo" aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" type="date" placeholder="Data de nascimento" onfocus="(this.type='date')" onblur="(this.type='text')" aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" type="text" placeholder="E-mail" aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" type="text" placeholder="CPF" aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" type="tel" placeholder="Telefone para contato" aria-label=".form-control-lg example">
-
-
-
-
+                                    <input class="form-control form-control-lg" type="text" placeholder="Nome completo"
+                                        aria-label=".form-control-lg example">
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder="Data de nascimento" onblur="(this.type='text')"
+                                        onfocus="(this.type='date')" aria-label=".form-control-lg example">
+                                    <input class="form-control form-control-lg" type="text" placeholder="E-mail"
+                                        aria-label=".form-control-lg example">
+                                    <input class="form-control form-control-lg" type="text" placeholder="CPF"
+                                        aria-label=".form-control-lg example">
+                                    <input class="form-control form-control-lg" type="tel"
+                                        placeholder="Telefone para contato" aria-label=".form-control-lg example">
+                                    <div class="d-flex align-items-center justify-content-center gap-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Eu li e concordo com os Termos de Uso para utilização dos meus dados no site
+                                            do
+                                            Hospital, para fins de consulta e de contato
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="d-flex mt-4 justify-content-between margin-grande-bottom">
-                                    <button class="btn btn-ghost-primary btn-next"><i
-                                            class="bi bi-chevron-left"></i>Voltar</button>
-                                    <button class="btn btn-primary btn-next">Avançar <i
-                                            class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="d-flex mt-4 justify-content-between margin-grande-bottom">
+                                <button class="btn btn-ghost-primary btn-next"><i
+                                        class="bi bi-chevron-left"></i>Voltar</button>
+                                <button id="fourthButtonNext" class="btn btn-primary btn-next">Avançar <i
+                                        class="bi bi-chevron-right"></i></button>
+                            </div>
+                        </section>
+
+                        <section id="form-confirmar" class="d-none">
+                            <div class="row">
+                                <div class="col d-grid gap-3">
+                                    <div></div>
+                                    <h3 class="fonte-azul">Especialidade</h3>
+                                    <span></span>
+                                    <div></div>
+                                    <h3 class="fonte-azul">Data e Hora</h3>
+                                    <span></span>
+                                    <div></div>
+                                    <h3 class="fonte-azul">Profissional</h3>
+                                    <span></span>
+                                    <div></div>
+                                    <h3 class="fonte-azul">Dados do paciente</h3>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div></div>
                                 </div>
+                            </div>
+                            <div class="d-flex mt-4 justify-content-between margin-grande-bottom">
+                                <button class="btn btn-ghost-primary btn-next"><i
+                                        class="bi bi-chevron-left"></i>Voltar</button>
+                                <button id="buttonConfirm" class="btn btn-primary btn-next">Avançar <i
+                                        class="bi bi-chevron-right"></i></button>
                             </div>
                         </section>
                     </div>
+            </section>
+
+            <section id="final" class="d-none">
+                <div class="row d-flex justify-content-center mt-5">
+                    <div class="col-12 col-md-6">
+                        <div class="d-grid gap-4">
+                            <h1 class="fonte-azul fonte-grande fonte-titulo fonte-titulo text-center">Sua consulta foi
+                                agendada com sucesso!</h1>
+                            <p class="cor-cinza fonte-titulo text-center">Você receberá, em seu e-mail, uma notificação
+                                como lembrete. Obrigado!</p>
+                            <div class="d-flex mt-4 justify-content-between margin-grande-bottom">
+                                <button id="homeButton" class="btn btn-primary btn-start-appointment">Voltar para a home</button>
+                                <button class="btn btn-outline-primary btn-start-appointment">Ver mais
+                                    facilidades</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
+        </div>
+        </div>
+        </section>
 
         </div>
     </main>
