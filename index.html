@@ -155,8 +155,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-12 col-md-3 d-flex align-items-center">
-                        <h2><b id="etapa" class="fonte-azul fonte-titulo">Selecione a especialidade</b></h2>
+                    <div class="col-12 col-md-3 mt-3">
+                        <h2 class="margin-h2"><b id="etapa" class="fonte-azul fonte-titulo">Selecione a especialidade</b></h2>
                     </div>
                     <div class="col-12 col-md-6">
 
@@ -262,7 +262,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex mt-4 justify-content-between">
-                                    <button class="btn btn-ghost-primary btn-next"><i
+                                    <button id="firstButtonPrevious" class="btn btn-ghost-primary btn-next"><i
                                             class="bi bi-chevron-left"></i>Voltar</button>
                                     <button id="secondButtonNext" class="btn btn-primary btn-next">Avançar <i
                                             class="bi bi-chevron-right"></i></button>
@@ -273,8 +273,8 @@
                         <section id="form-time" class="d-none">
                             <div class="row">
                                 <div class="col d-grid margin-grande-top gap-3">
-                                    <input class="form-control form-control-lg" type="date" aria-label="date input">
-                                    <select class="form-select form-select-lg" aria-label="select time">
+                                    <input id="date" class="form-control form-control-lg" type="date" aria-label="date input">
+                                    <select id="horaSelect" class="form-select form-select-lg" aria-label="select time">
                                         <option disabled selected>Selecione um horário disponível</option>
                                         <option value="7">7:00</option>
                                         <option value="8">8:00</option>
@@ -290,7 +290,7 @@
                                     </select>
                                 </div>
                                 <div class="d-flex mt-4 justify-content-between margin-grande-bottom">
-                                    <button class="btn btn-ghost-primary btn-next"><i
+                                    <button id="secondButtonPrevious" class="btn btn-ghost-primary btn-next"><i
                                             class="bi bi-chevron-left"></i>Voltar</button>
                                     <button id="thirdButtonNext" class="btn btn-primary btn-next">Avançar <i
                                             class="bi bi-chevron-right"></i></button>
@@ -301,22 +301,22 @@
                         <section id="form-info" class="d-none">
                             <div class="row">
                                 <div class="col d-grid gap-3">
-                                    <select class="form-select form-select-lg" aria-label="select time">
+                                    <select id="whosConsulting" class="form-select form-select-lg" aria-label="select time">
                                         <option selected value="Consulta para si mesmo">Sim, a consulta é para mim
                                         </option>
                                         <option value="Consulta para outra pessoas">Não, a consulta é para outra pessoa
                                         </option>
                                     </select>
-                                    <input class="form-control form-control-lg" type="text" placeholder="Nome completo"
+                                    <input id="nameInput" class="form-control form-control-lg" type="text" placeholder="Nome completo"
                                         aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" type="text"
+                                    <input id="birthdayInput" class="form-control form-control-lg" type="text"
                                         placeholder="Data de nascimento" onblur="(this.type='text')"
                                         onfocus="(this.type='date')" aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" type="text" placeholder="E-mail"
+                                    <input id="emailInput" class="form-control form-control-lg" type="text" placeholder="E-mail"
                                         aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" type="text" placeholder="CPF"
+                                    <input id="cpfInput" class="form-control form-control-lg" type="text" placeholder="CPF"
                                         aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" type="tel"
+                                    <input id="telInput" class="form-control form-control-lg" type="tel"
                                         placeholder="Telefone para contato" aria-label=".form-control-lg example">
                                     <div class="d-flex align-items-center justify-content-center gap-3">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -329,7 +329,7 @@
                                 </div>
                             </div>
                             <div class="d-flex mt-4 justify-content-between margin-grande-bottom">
-                                <button class="btn btn-ghost-primary btn-next"><i
+                                <button id="thirdButtonPrevious" class="btn btn-ghost-primary btn-next"><i
                                         class="bi bi-chevron-left"></i>Voltar</button>
                                 <button id="fourthButtonNext" class="btn btn-primary btn-next">Avançar <i
                                         class="bi bi-chevron-right"></i></button>
@@ -341,26 +341,26 @@
                                 <div class="col d-grid gap-3">
                                     <div></div>
                                     <h3 class="fonte-azul">Especialidade</h3>
-                                    <span></span>
+                                    <span id="especialidadeTxtFinal"></span>
                                     <div></div>
                                     <h3 class="fonte-azul">Data e Hora</h3>
-                                    <span></span>
+                                    <span id="dateTxtFinal"></span>
                                     <div></div>
                                     <h3 class="fonte-azul">Profissional</h3>
-                                    <span></span>
+                                    <span id="doctorTxtFinal"></span>
                                     <div></div>
                                     <h3 class="fonte-azul">Dados do paciente</h3>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                                    <span id="whosConsultingFinal"></span>
+                                    <span id="nomeTxtFInal"></span>
+                                    <span id="birthdayTxtFinal"></span>
+                                    <span id="cpfTxtFinal"></span>
+                                    <span id="emailTxtFinal"></span>
+                                    <span id="telTxtFinal"></span>
                                     <div></div>
                                 </div>
                             </div>
                             <div class="d-flex mt-4 justify-content-between margin-grande-bottom">
-                                <button class="btn btn-ghost-primary btn-next"><i
+                                <button id="fourthButtonPrevious" class="btn btn-ghost-primary btn-next"><i
                                         class="bi bi-chevron-left"></i>Voltar</button>
                                 <button id="buttonConfirm" class="btn btn-primary btn-next">Avançar <i
                                         class="bi bi-chevron-right"></i></button>

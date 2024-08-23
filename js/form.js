@@ -1,4 +1,4 @@
-// List steps
+// General
 const one = document.querySelector(".one");
 const two = document.querySelector(".two");
 const three = document.querySelector(".three");
@@ -9,6 +9,17 @@ const especialidade_txt = document.getElementById('especialidade-txt');
 const profissional_txt = document.getElementById('profissional-txt');
 const date_txt = document.getElementById('date-txt');
 const paciente_txt = document.getElementById('paciente');
+
+const step = document.getElementById('etapa');
+const especialidadeTxtFinal = document.getElementById('especialidadeTxtFinal')
+const dateTxtFinal = document.getElementById('dateTxtFinal')
+const doctorTxtFinal = document.getElementById('doctorTxtFinal')
+const whosConsultingFinal = document.getElementById('whosConsultingFinal')
+const nomeTxtFInal = document.getElementById('nomeTxtFInal')
+const birthdayTxtFinal = document.getElementById('birthdayTxtFinal')
+const cpfTxtFinal = document.getElementById('cpfTxtFinal')
+const emailTxtFinal = document.getElementById('emailTxtFinal')
+const telTxtFinal = document.getElementById('telTxtFinal')
 
 // Sections
 const homeSection = document.getElementById('home');
@@ -27,12 +38,16 @@ const firstButtonNext = document.getElementById('firstButtonNext');
 const secondButtonNext = document.getElementById('secondButtonNext');
 const thirdButtonNext = document.getElementById('thirdButtonNext');
 const fourthButtonNext = document.getElementById('fourthButtonNext');
+const firstButtonPrevious = document.getElementById('firstButtonPrevious');
+const secondButtonPrevious = document.getElementById('secondButtonPrevious');
+const thirdButtonPrevious = document.getElementById('thirdButtonPrevious');
+const fourthButtonPrevious = document.getElementById('fourthButtonPrevious');
 const buttonConfirm = document.getElementById('buttonConfirm');
 const homeButton = document.getElementById('homeButton');
 
-// Infos
-const especialidade1 = document.getElementById('especialidade1');
-const doctorRadio = document.querySelector('input[name="doutor"]:checked')
+
+
+
 
 // Variaveis
 let i = 0;
@@ -97,14 +112,81 @@ function nextForm() {
         form_array[i + 1].classList.remove('d-none');
         i++;
     }
-    saveInfos();
-}
-function saveInfos() {
-    especialidade_txt.innerHTML = especialidade1.value;
-    profissional_txt.innerHTML = doctorRadio.value;
 }
 
-function backToHome(){
+function prviousForm() {
+    form_array[i - 1].classList.remove('d-none');
+    form_array[i].classList.add('d-none');
+    i--;
+}
+
+function saveEspecialidade() {
+    const especialidade1 = document.getElementById('especialidade1');
+    especialidade_txt.innerHTML = especialidade1.value;
+    step.innerHTML = 'Selecione o profissional';
+    especialidadeTxtFinal.innerHTML = `${especialidade1.value}`;
+}
+
+function saveDotor() {
+    const doctorRadio = document.querySelector('input[name="doutor"]:checked');
+    profissional_txt.innerHTML = doctorRadio.value;
+    step.innerHTML = 'Selecione a data e o horário da consulta';
+    doctorTxtFinal.innerHTML = `${doctorRadio.value}`;
+}
+
+function saveDate() {
+    const d = document.getElementById('date').value;
+    const [ano, mes, dia] = d.split('-');
+    const horaSelect = document.getElementById('horaSelect');
+    const horaTxt = horaSelect.options[horaSelect.selectedIndex].text;
+    date_txt.innerHTML = `${dia} | ${mes} | ${ano} • ${horaTxt}H`;
+    step.innerHTML = 'Informe os dados do paciente';
+    dateTxtFinal.innerHTML = `${dia} | ${mes} | ${ano} • ${horaTxt}h`;
+}
+
+function savePacient() {
+
+    const whosConsulting = document.getElementById('whosConsulting');
+    const whosConsultingTxt = whosConsulting.options[whosConsulting.selectedIndex].text;
+    const nameInput = document.getElementById('nameInput');
+    const birthdayInput = document.getElementById('birthdayInput').value;
+    const [anobday, mesbday, diabday] = birthdayInput.split('-');
+    const emailInput = document.getElementById('emailInput');
+    const cpfInputInput = document.getElementById('cpfInput');
+    const telInput = document.getElementById('telInput');
+
+    paciente_txt.innerHTML = nameInput.value;
+    step.innerHTML = 'Confirmação de dados';
+
+    whosConsultingFinal.innerHTML = `Tipo de consulta: ${whosConsultingTxt}`;
+    nomeTxtFInal.innerHTML = `Nome: ${nameInput.value}`;
+    birthdayTxtFinal.innerHTML = `Data de Nascimento: ${diabday}/${mesbday}/${anobday}`;
+    cpfTxtFinal.innerHTML = `CPF: ${cpfInputInput.value}`;
+    emailTxtFinal.innerHTML = `E-mail: ${emailInput.value}`;
+    telTxtFinal.innerHTML = `Telefone: ${telInput.value}`;
+}
+
+function removeEspecialidade() {
+    especialidade_txt.innerHTML = ``;
+    step.innerHTML = 'Selecione a especialidade';
+}
+
+function removeDoctor() {
+    profissional_txt.innerHTML = ``;
+    step.innerHTML = 'Selecione o profissional';
+}
+
+function removeDate() {
+    date_txt.innerHTML = ``;
+    step.innerHTML = 'Selecione a data e o horário da consulta';
+}
+
+function removePacient(){
+    paciente_txt.innerHTML = ``;
+    step.innerHTML = 'Informe os dados do paciente';
+}
+
+function backToHome() {
     finalSection.classList.add('d-none');
     homeSection.classList.remove('d-none');
 }
@@ -113,9 +195,31 @@ function backToHome(){
 // Events
 
 startBookingAppointment.addEventListener('click', goToForms);
-firstButtonNext.addEventListener('click', nextForm);
+
+firstButtonNext.addEventListener('click', nextForm)
+firstButtonNext.addEventListener('click', saveEspecialidade);
+
 secondButtonNext.addEventListener('click', nextForm);
+secondButtonNext.addEventListener('click', saveDotor);
+
 thirdButtonNext.addEventListener('click', nextForm);
+thirdButtonNext.addEventListener('click', saveDate);
+
 fourthButtonNext.addEventListener('click', nextForm);
+fourthButtonNext.addEventListener('click', savePacient);
+
+firstButtonPrevious.addEventListener('click', prviousForm);
+firstButtonPrevious.addEventListener('click', removeEspecialidade);
+
+secondButtonPrevious.addEventListener('click', prviousForm);
+secondButtonPrevious.addEventListener('click', removeDoctor);
+
+thirdButtonPrevious.addEventListener('click', prviousForm);
+thirdButtonPrevious.addEventListener('click', removeDate);
+
+fourthButtonPrevious.addEventListener('click', prviousForm);
+fourthButtonPrevious.addEventListener('click', removePacient);
+
 buttonConfirm.addEventListener('click', nextForm);
+
 homeButton.addEventListener('click', backToHome)

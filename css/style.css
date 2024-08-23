@@ -108,6 +108,7 @@
 
 .breadcrumbs {
     margin-top: 120px;
+    margin-bottom: 80px;
 }
 
 .progress-list{
@@ -163,6 +164,10 @@
     height: 70px;
 }
 
+.margin-h2{
+    margin-top: 85px;
+}
+
 .margin-grande-top{
     margin-top: 90px;
 }
@@ -206,6 +211,7 @@
     margin-top: 82px;
     padding: 70px;
 }
+
 
 .losango {
     opacity: 0;
