@@ -5,10 +5,15 @@ const three = document.querySelector(".three");
 const four = document.querySelector(".four");
 const five = document.querySelector(".five");
 
+const specialties = document.querySelectorAll('.specialty-item');
+
+const profesionalOf = document.getElementById('profesionalOf');
+
 const especialidade_txt = document.getElementById('especialidade-txt');
 const profissional_txt = document.getElementById('profissional-txt');
 const date_txt = document.getElementById('date-txt');
 const paciente_txt = document.getElementById('paciente');
+
 
 const step = document.getElementById('etapa');
 const especialidadeTxtFinal = document.getElementById('especialidadeTxtFinal')
@@ -57,7 +62,6 @@ one.onclick = function () {
     four.classList.remove("active");
     five.classList.remove("active");
 }
-
 two.onclick = function () {
     one.classList.add("active");
     two.classList.add("active");
@@ -87,9 +91,14 @@ five.onclick = function () {
     five.classList.add("active");
 }
 
-especialidade1.onclick = function () {
-    firstButtonNext.classList.remove('disabled')
-}
+specialties.forEach(specialty => {
+    specialty.addEventListener('click', () => {
+        specialties.forEach(item => item.classList.remove('active'));
+        specialty.classList.add('active');
+        firstButtonNext.classList.remove('disabled');
+    });
+});
+
 
 function goToForms() {
     homeSection.classList.add('d-none');
@@ -117,10 +126,11 @@ function prviousForm() {
 }
 
 function saveEspecialidade() {
-    const especialidade1 = document.getElementById('especialidade1');
-    especialidade_txt.innerHTML = especialidade1.dataset.value;
+    const especialidade = document.querySelector('.specialty-item.active');
+    especialidade_txt.innerHTML = especialidade.dataset.value;
     step.innerHTML = 'Selecione o profissional';
-    especialidadeTxtFinal.innerHTML = `${especialidade1.value}`;
+    especialidadeTxtFinal.innerHTML = `${especialidade.value}`;
+    profesionalOf.innerHTML = `Profissionais de ${especialidade.dataset.value}` 
 }
 
 function saveDotor() {
@@ -187,7 +197,6 @@ function backToHome() {
     homeSection.classList.remove('d-none');
 }
 
-
 // Events
 
 startBookingAppointment.addEventListener('click', goToForms);
@@ -219,12 +228,3 @@ fourthButtonPrevious.addEventListener('click', removePacient);
 buttonConfirm.addEventListener('click', nextForm);
 
 homeButton.addEventListener('click', backToHome)
-
-const specialties = document.querySelectorAll('.specialty-item');
-
-specialties.forEach(specialty => {
-    specialty.addEventListener('click', () => {
-        specialties.forEach(item => item.classList.remove('active'));
-        specialty.classList.add('active');
-    });
-});

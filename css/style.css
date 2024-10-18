@@ -197,6 +197,11 @@
     height: 300px;
 }
 
+.card.active{
+    border: solid 2px #C05A94;
+    background-color: #EBE2D1;
+}
+
 .card-image{
     height: 160px;
     width: 100%;
